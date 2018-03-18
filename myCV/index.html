@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<!-- saved from url=(0180)https://m.zhipin.com/geekTinyResume?sid=self&securityId=D8_UlU-U4gaL9HL3MUhbTnPYZcUV_IpUgXdGX1h05u5NysMIDI9ScOc48nxOvc_2NJrpwnRYAMjiXCXJAjv-XvtOqTCqrEtIIJmNfgDEGqp042jsCd1a2YCOI0A~ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>BOSS直聘</title>
+    <link rel="stylesheet" type="text/css" href="./BOSS直聘_files/style20151103.css">
+    <script charset="utf-8" src="./BOSS直聘_files/v.js.下载"></script><script src="./BOSS直聘_files/hm.js.下载"></script><script src="./BOSS直聘_files/ka.js.下载"></script><script type="text/javascript" src="./BOSS直聘_files/jquery-2.1.1.min.js.下载"></script>
+    <script>
+        $(function () {
+            var More = $(".geek_item .more");
+            var Mark = $(".mark");
+            var Layer = $(".layer_box");
+            var LayerTop = ($(window).height() - Layer.outerHeight()) / 2;
+            Layer.css("top", LayerTop);
+
+            Mark.on("click", function () {
+                Mark.hide();
+                Layer.hide();
+            });
+            More.on("click", function (event) {
+                Mark.show();
+                Layer.show();
+                event.preventDefault();
+            });
+            Layer.on("click", function (event) {
+                event.preventDefault();
+            });
+
+        });
+    </script>
+
+    
+    
+    
+    <script src="./BOSS直聘_files/sid.js.下载"></script>
+    <script src="./BOSS直聘_files/jweixin-1.0.0.js.下载"></script>
+    <script>
+        var shareMessage = {"wbShareTitle":"#招聘#牛人李贵涛  3年工作经验，目标 Java职位，求靠谱Boss带走。迅速进入@Boss直聘，把TA带走，下载链接奉上：https://m.zhipin.com/download?from=weibo","wxShareTitle":"【Boss直聘】李贵涛正在求职Java，求推荐，求转发~","wxShareDesc":"经验：3年工作经验   期望薪资：10k-15k","smsShareTitle":"牛人李贵涛  3年工作经验，目标 Java职位，求靠谱Boss带走。迅速进入@Boss直聘，把TA带走，下载链接奉上：https://m.zhipin.com/download?from=duanxin"};
+        var imgUrl = 'https://img.bosszhipin.com/beijin/mcs/useravatar/20170311/bf1f02eeafd91048313c1ad3dc60f8828c7dd922ad47494fc02c388e12c00eac.jpg';
+        var lineLink = "https://m.zhipin.com/niu/a4803ffabf355ad21XFz2N61ElA~";
+        if (lineLink.indexOf("?") >= 0) {
+            lineLink += ("&sid=" + get_sid());
+        } else {
+            lineLink += ("?sid=" + get_sid());
+        }
+        var descContent = shareMessage['wxShareDesc'];
+        var shareTitle = shareMessage['wxShareTitle'];
+        var shareCallback = function () {
+        }
+    </script>
+    
+<script>
+//线下wxc2c6c69c5f42898d   线上wx64d80281053de5c8
+    var appId = window.appId || "wx154e925eb1f54c86";
+
+    wx.config({
+        debug: false,
+        appId: appId, // 必填，公众号的唯一标识
+        timestamp: '1521344549', // 必填，生成签名的时间戳
+        nonceStr: 'b80c8bea-7141-4b52-97d2-bc56feb76c02', // 必填，生成签名的随机串
+        signature: 'ed5086559b5af1b8febd2bb1c4cfe61f1b17953c',// 必填，签名，见附录1
+        jsApiList: ['checkJsApi', 'onMenuShareTimeline', 'onMenuShareAppMessage', 'onMenuShareQQ'
+            , 'onMenuShareWeibo', 'hideMenuItems', 'showMenuItems', 'hideAllNonBaseMenuItem', 'showAllNonBaseMenuItem'
+            , 'translateVoice', 'startRecord', 'stopRecord', 'onRecordEnd', 'playVoice', 'pauseVoice', 'stopVoice'
+            , 'uploadVoice', 'downloadVoice', 'chooseImage', 'previewImage', 'uploadImage', 'downloadImage', 'getNetworkType'
+            , 'openLocation', 'getLocation', 'hideOptionMenu', 'showOptionMenu', 'closeWindow', 'scanQRCode', 'chooseWXPay'
+            , 'openProductSpecificView', 'addCard', 'chooseCard', 'openCard'] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+    });
+    wx.ready(function(){
+        imgUrl = imgUrl.replace('https://','http://');
+    });
+    function setShareContent() {
+        wx.onMenuShareTimeline({
+            title: (typeof timelineTitle == "string" ? timelineTitle : shareTitle), // 分享标题
+            link: lineLink, // 分享链接
+            imgUrl: imgUrl, // 分享图标
+            success: function () {
+                if (window._T) {
+                    _T.sendEvent('wx-share-timeline-success');
+                }
+                //成功分享回调
+                if (window.shareSuccessCallback) {
+                    window.shareSuccessCallback();
+                    return;
+                }
+                // 用户确认分享后执行的回调函数
+                if (window.shareCallback) {
+                    window.shareCallback();
+                    return;
+                }
+                if (window.redirectUrl) {
+                    window.location.href = window.redirectUrl;
+                }
+            },
+            cancel: function () {
+                if (window._T) {
+                    _T.sendEvent('wx-share-timeline-cancel');
+                }
+                //取消分享回调
+                if (window.shareCancleCallback) {
+                    window.shareCancleCallback();
+                    return;
+                }
+                // 用户取消分享后执行的回调函数
+                if (window.shareCallback) {
+                    //window.shareCallback();
+                    return;
+                }
+                if (window.redirectUrl) {
+                    window.location.href = window.redirectUrl;
+                }
+            }
+        });
+
+        wx.onMenuShareAppMessage({
+            title: shareTitle, // 分享标题
+            desc: descContent, // 分享描述
+            link: lineLink, // 分享链接
+            imgUrl: imgUrl, // 分享图标
+            type: '', // 分享类型,music、video或link，不填默认为link
+            dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+            success: function () {
+                // 用户确认分享后执行的回调函数
+                if (window._T) {
+                    _T.sendEvent('wx-share-friend-success');
+                }
+                //成功分享回调
+                if (window.shareSuccessCallback) {
+                    window.shareSuccessCallback();
+                    return;
+                }
+                if (window.shareCallback) {
+                    window.shareCallback();
+                    return;
+                }
+                if (window.redirectUrl) {
+                    window.location.href = window.redirectUrl;
+                }
+            },
+            cancel: function () {
+                // 用户取消分享后执行的回调函数
+                if (window._T) {
+                    _T.sendEvent('wx-share-friend-cancel');
+                }
+                //取消分享回调
+                if (window.shareCancleCallback) {
+                    window.shareCancleCallback();
+                    return;
+                }
+                // 用户确认分享后执行的回调函数
+                if (window.shareCallback) {
+                    window.shareCallback();
+                    return;
+                }
+
+                if (window.redirectUrl) {
+                    window.location.href = window.redirectUrl;
+                }
+            }
+        });
+
+        wx.onMenuShareQQ({
+            title: shareTitle, // 分享标题
+            desc: descContent, // 分享描述
+            link: lineLink, // 分享链接
+            imgUrl: imgUrl, // 分享图标
+            success: function () {
+                // 用户确认分享后执行的回调函数
+                if (window._T) {
+                    _T.sendEvent('wx-share-qq-success');
+                }
+                //成功分享回调
+                if (window.shareSuccessCallback) {
+                    window.shareSuccessCallback();
+                    return;
+                }
+                if (window.shareCallback) {
+                    window.shareCallback();
+                    return;
+                }
+                if (window.redirectUrl) {
+                    window.location.href = window.redirectUrl;
+                }
+            },
+            cancel: function () {
+                // 用户确认分享后执行的回调函数
+                if (window._T) {
+                    _T.sendEvent('wx-share-qq-cancel');
+                }
+                //取消分享回调
+                if (window.shareCancleCallback) {
+                    window.shareCancleCallback();
+                    return;
+                }
+                if (window.shareCallback) {
+                    window.shareCallback();
+                    return;
+                }
+                if (window.redirectUrl) {
+                    window.location.href = window.redirectUrl;
+                }
+            }
+        });
+
+        wx.onMenuShareWeibo({
+            title: shareTitle, // 分享标题
+            desc: descContent, // 分享描述
+            link: lineLink, // 分享链接
+            imgUrl: imgUrl, // 分享图标
+            success: function () {
+                if (window._T) {
+                    _T.sendEvent('wx-share-weibo-success');
+                }
+                //成功分享回调
+                if (window.shareSuccessCallback) {
+                    window.shareSuccessCallback();
+                    return;
+                }
+                if (window.shareCallback) {
+                    window.shareCallback();
+                    return;
+                }
+                if (window.redirectUrl) {
+                    window.location.href = window.redirectUrl;
+                }
+            },
+            cancel: function () {
+                if (window._T) {
+                    _T.sendEvent('wx-share-weibo-cancel');
+                }
+                //取消分享回调
+                if (window.shareCancleCallback) {
+                    window.shareCancleCallback();
+                    return;
+                }
+                if (window.shareCallback) {
+                    window.shareCallback();
+                    return;
+                }
+                if (window.redirectUrl) {
+                    window.location.href = window.redirectUrl;
+                }
+            }
+        });
+    }
+    wx.ready(function () {
+        setShareContent();
+    });
+
+</script>
+    
+    
+    
+</head>
+
+
+<body class="pb_footbar">
+<div class="main">
+    <div class="mbox geek_item">
+        <div class="geek_info KZ_dflex">
+            <div class="info KZ_flex">
+                <h2>
+                    
+                        
+                        李贵涛
+                    
+                    <span class="status">离职-随时到岗</span>
+                </h2>
+                <ul class="conts">
+                    <li>
+                        <span class="city"><i class="i_city"></i>济南</span>
+                        <span class="year"><i class="i_year"></i>
+                            3年
+                        </span>
+                        <span class="education"><i class="i_education"></i>本科</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="geek_pic">
+                <img src="./BOSS直聘_files/bf1f02eeafd91048313c1ad3dc60f8828c7dd922ad47494fc02c388e12c00eac_s.jpg">
+                
+                <i class="i_man"></i>
+                
+            </div>
+        </div>
+        <div class="jobs">
+            <div class="info KZ_dflex">
+                <h2 class="KZ_flex">Java
+                    
+                </h2>
+                <span class="monthly">
+                    <i class="i_monthly"></i>
+                    
+                        
+                        
+                            10k - 15k
+                        
+                    
+                </span>
+            </div>
+            <div class="conts jlist KZ_dflex">
+                <i class="i_jinfo"></i>
+                <ul class="intr KZ_flex">
+                    <li>期望行业</li>
+                    
+                        
+                            <li>不限</li>
+                        
+                        
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="mbox company_intr">
+        <h2 class="hd">我的优势<i class="i_tico1"></i></h2>
+
+        <div class="cont">
+            <p class="txt">三年Java开发经验，有一定的项目经验，较强的逻辑思维<br>熟悉Linux系统，并很感兴趣<br>喜欢了解新技术</p>
+
+            
+        </div>
+    </div>
+    
+        <div class="mbox experience">
+            <h2 class="hd">工作经历<i class="i_workexp"></i></h2>
+
+            <div class="cont">
+                
+                    <div class="exp_info">
+                        <h3>
+                            <span class="companyname">
+                            
+                                电子商务<em>|</em>
+                            
+                                    杭州东导数据有限公司</span>
+                            <em class="date">
+                                2017.03-至今
+                            </em>
+                        </h3>
+
+                        <div class="tit">
+                            
+                                
+                                    Java
+                                
+                                
+                            
+                            
+                                <em>|</em>技术部
+                            
+                        </div>
+                        <div class="tags_box">
+                            
+                                <span>Java</span>
+                            
+                                <span>数据库</span>
+                            
+                                <span>后端开发</span>
+                            
+                        </div>
+                        
+                        
+                            <div class="jobcont i_intr">1. 负责后台开发<br>2. 负责服务器的运行和维护</div>
+                        
+                    </div>
+                
+                    <div class="exp_info">
+                        <h3>
+                            <span class="companyname">
+                            
+                                互联网<em>|</em>
+                            
+                                    北京万灵盘古科技有限公司</span>
+                            <em class="date">
+                                2016.11-2017.02
+                            </em>
+                        </h3>
+
+                        <div class="tit">
+                            
+                                
+                                    Java
+                                
+                                
+                            
+                            
+                        </div>
+                        <div class="tags_box">
+                            
+                                <span>数据库</span>
+                            
+                                <span>后端开发</span>
+                            
+                                <span>Java</span>
+                            
+                        </div>
+                        
+                        
+                            <div class="jobcont i_intr">负责需求分析， 系统设计， 数据库设计， 相关文档编写和模块开发</div>
+                        
+                    </div>
+                
+                    <div class="exp_info">
+                        <h3>
+                            <span class="companyname">
+                            
+                                互联网<em>|</em>
+                            
+                                    青岛睿帮信息技术有限公司</span>
+                            <em class="date">
+                                2015.04-2016.11
+                            </em>
+                        </h3>
+
+                        <div class="tit">
+                            
+                                
+                                    大数据工程师
+                                
+                                
+                            
+                            
+                                <em>|</em>开发
+                            
+                        </div>
+                        <div class="tags_box">
+                            
+                                <span>数据分析</span>
+                            
+                                <span>数据库</span>
+                            
+                                <span>R语言</span>
+                            
+                        </div>
+                        
+                        
+                            <div class="jobcont i_intr">负责数据分析、java开发及相关系统的搭建与维护</div>
+                        
+                    </div>
+                
+            </div>
+        </div>
+    
+    
+        <div class="mbox experience project">
+            <h2 class="hd">项目经验<i class="i_workexp"></i></h2>
+
+            <div class="cont">
+                
+                    <div class="exp_info">
+                        <h3>
+                            <span class="companyname">
+                                
+                                    
+                                        
+                                        
+                                            <a ka="projectExperience-URL" class="view" href="http://xn--pc:http-mk6m586x//www.okxueche.net%20%20%E7%A7%BB%E5%8A%A8%E5%AE%98%E7%BD%91%EF%BC%9Ahttp://mobi.okxueche.net">OK学车官网、APP<em>|</em>开发 &gt;</a>
+                                        
+                                    
+                                
+                                
+                            </span>
+                            <em class="date">2017.03-至今</em>
+                        </h3>
+                        
+                        
+                            <div class="jobcont i_intr">官网后台开发4人，我在小组内为主要开发、服务器的运行及维护。<br>APP后台开发5人，我在小组内负责部分接口开发、日志追踪及bug修复，及服务器的运行及维护。</div>
+                        
+                    </div>
+                
+                    <div class="exp_info">
+                        <h3>
+                            <span class="companyname">
+                                
+                                
+                                    问卷系统<em>|</em>设计与开发
+                                
+                            </span>
+                            <em class="date">2016.12-2017.02</em>
+                        </h3>
+                        
+                            <div class="jobcont i_results">该项目数据库是由本人设计，核心模块是由本人实现。被应用在诸多其他项目中。</div>
+                        
+                        
+                            <div class="jobcont i_intr">问卷系统包括设计问卷，答卷采集，答卷分析三个模块。<br>用到的技术/框架有：Spring、SpringMVC、MyBatis、Ajax、MySQL</div>
+                        
+                    </div>
+                
+                    <div class="exp_info">
+                        <h3>
+                            <span class="companyname">
+                                
+                                
+                                    汽车市场评论分析<em>|</em>Leader和开发
+                                
+                            </span>
+                            <em class="date">2016.09-2016.12</em>
+                        </h3>
+                        
+                        
+                            <div class="jobcont i_intr">本系统包含评论抓取，情感分析，前台展示三个模块。<br>用到的技术/框架有：webmagic、lucene、ssm、Redis、Ajax</div>
+                        
+                    </div>
+                
+                    <div class="exp_info">
+                        <h3>
+                            <span class="companyname">
+                                
+                                
+                                    电商平台行为监测二次开发<em>|</em>设计与开发
+                                
+                            </span>
+                            <em class="date">2016.06-2016.09</em>
+                        </h3>
+                        
+                        
+                            <div class="jobcont i_intr">对电商平台用户的行为监测（包括pv、uv等）的统计、分析；<br>用到的技术/框架有：flume、elasticsearch、dubbo、kafka、Hadoop mapreduce、ssm</div>
+                        
+                    </div>
+                
+                    <div class="exp_info">
+                        <h3>
+                            <span class="companyname">
+                                
+                                
+                                    自媒体公众平台<em>|</em>开发
+                                
+                            </span>
+                            <em class="date">2016.02-2016.06</em>
+                        </h3>
+                        
+                        
+                            <div class="jobcont i_intr">自媒体平台开发<br>用到的技术/框架有：jfinal、beetl</div>
+                        
+                    </div>
+                
+                    <div class="exp_info">
+                        <h3>
+                            <span class="companyname">
+                                
+                                
+                                    用户画像系统<em>|</em>设计与开发
+                                
+                            </span>
+                            <em class="date">2015.06-2016.02</em>
+                        </h3>
+                        
+                        
+                            <div class="jobcont i_intr">基于自媒体平台的用户行为，对用户进行画像，最终实现广告的精准投放。<br>用到的技术/框架有：MongoDB、Jersey、Ajax、MySQL、Spring、SpringMVC、Mybatics、Spark MLlib</div>
+                        
+                    </div>
+                
+                    <div class="exp_info">
+                        <h3>
+                            <span class="companyname">
+                                
+                                
+                                    川崎病云诊断<em>|</em>Leader和开发
+                                
+                            </span>
+                            <em class="date">2015.04-2015.06</em>
+                        </h3>
+                        
+                            <div class="jobcont i_results">灵敏度和特异度均≥80％，正在申请cfda。</div>
+                        
+                        
+                            <div class="jobcont i_intr">基于大数据分析技术，结合川崎病辅助诊断已有算法成果，利用软件工程思想，通过相应软件开发技术，完成了川崎病辅助诊断系统的实现、测试与发布。<br>用到的技术有：R语言、Hadoop、RHadoop、RJava、jersey</div>
+                        
+                    </div>
+                
+            </div>
+        </div>
+    
+    
+        <div class="mbox experience">
+            <h2 class="hd">教育经历<i class="i_eduexp"></i></h2>
+
+            <div class="cont">
+                
+                    <div class="exp_info">
+                        <h3>
+                            <span class="companyname">青岛大学</span>
+                            <em class="date">
+                                
+                                    2012 -
+                                    
+                                        
+                                            2016
+                                        
+                                        
+                                    
+                                
+                            </em>
+                        </h3>
+
+                        <div class="tit">计算机科学与技术<em>|</em>本科</div>
+                        
+                    </div>
+                
+            </div>
+        </div>
+    
+</div>
+
+    
+    
+        
+    
+
+
+
+
+    <a href="https://m.zhipin.com/d/v2/?type=ck&amp;pkn=show-geek&amp;sid=self">
+        <div class="footer footerbar">打开Boss直聘，与李贵涛沟通</div>
+    </a>
+
+
+
+<div class="mark"></div>
+<div class="layer_box" style="top: 293.5px;">
+    <div class="hd">Ta的其他求职意向</div>
+    <div class="con">
+        
+            
+                
+            
+        
+
+        
+    </div>
+</div>
+<!-- 弹层提示 -->
+<div id="pop-share" class="pop-layer">
+    <img src="./BOSS直聘_files/share_02.png">
+</div>
+
+<input type="hidden" id="page_key_name" value="show-geek">
+
+
+<script>
+	function get_share_datas_from_html_inapp() {
+		var shid = "shdefault",
+			urlShid,
+			urlSid,
+			pk = "pkdefault",
+			pp = "ppdefault",
+			pkn = (typeof _PK != 'undefined' ? _PK : document.getElementById("page_key_name")),
+			getQueryString = function(name) {
+				var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"),
+					r = window.location.search.substr(1).match(reg);
+				if (r != null) {
+					return unescape(r[2])
+				}
+				return null;
+			};
+		urlShid = getQueryString("shid");
+		urlSid = getQueryString("sid");
+		if (urlShid) {
+			shid = urlShid;
+		} else if (urlSid) {
+			shid = urlSid;
+		}
+		if (pkn) {
+			var pknVal = pkn.value;
+			if (pknVal) {
+				var pkArray = pknVal.split("|");
+				if (pkArray.length == 1) {
+					pk = pkArray[0];
+				} else if (pkArray.length >= 2) {
+					pk = pkArray[0];
+					pp = pkArray[1];
+				}
+			}
+		}
+		var ret = [];
+		ret["shid"] = shid;
+		ret["pk"] = pk;
+		ret["pp"] = pp;
+		return ret;
+	}
+	function getQueryString(name)
+	{
+		var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+		var r = window.location.search.substr(1).match(reg);
+		if(r!=null)return  unescape(r[2]); return null;
+	}
+</script>
+<script>
+	var _T = _T || [];
+	(function() {
+	  var script = document.createElement("script");
+	  script.src = "/js/analytics/ka.js?v=2.0";
+	  var s = document.getElementsByTagName("script")[0];
+	  s.parentNode.insertBefore(script, s);
+	})();
+	
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?194df3105ad7148dcf2b98a91b5e727a";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+<script>
+    // 弹层
+    $(function(){
+        $('.showTip').click(function(e){
+            e.stopPropagation();
+            $('.pop-layer').css('display','block');
+        });
+        $('#pop-share').click(function(){
+            $('.pop-layer').css('display','none');
+        });
+    })
+
+</script>
+
+</body></html>
