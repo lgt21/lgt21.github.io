@@ -5,20 +5,20 @@
   
 
   
-  <title>redis配置+守护进程 | lgt21</title>
+  <title>redis守护进程 | lgt21</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="配置文件1.  /etc/redis.conf$ diff /etc/redis.conf /path/to/source/redis.conf1234567869c69&amp;lt; bind *---&amp;gt; bind 127.0.0.1136c136&amp;lt; daemonize yes---&amp;gt; daemonize no 2. /usr/lib/systemd/system/redis.ser">
+  <meta name="description" content="配置文件1.  /etc/redis.conf$ diff /etc/redis.conf /path/to/source/redis.conf1234136c136&amp;lt; daemonize yes---&amp;gt; daemonize no 2. /usr/lib/systemd/system/redis.service$ cat /usr/lib/systemd/system/redis.se">
 <meta name="keywords" content="redis">
 <meta property="og:type" content="article">
-<meta property="og:title" content="redis配置+守护进程">
+<meta property="og:title" content="redis守护进程">
 <meta property="og:url" content="http://yoursite.com/2018/04/29/redis配置-守护进程/index.html">
 <meta property="og:site_name" content="lgt21">
-<meta property="og:description" content="配置文件1.  /etc/redis.conf$ diff /etc/redis.conf /path/to/source/redis.conf1234567869c69&amp;lt; bind *---&amp;gt; bind 127.0.0.1136c136&amp;lt; daemonize yes---&amp;gt; daemonize no 2. /usr/lib/systemd/system/redis.ser">
+<meta property="og:description" content="配置文件1.  /etc/redis.conf$ diff /etc/redis.conf /path/to/source/redis.conf1234136c136&amp;lt; daemonize yes---&amp;gt; daemonize no 2. /usr/lib/systemd/system/redis.service$ cat /usr/lib/systemd/system/redis.se">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-04-29T14:31:47.728Z">
+<meta property="og:updated_time" content="2018-04-29T14:59:41.445Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="redis配置+守护进程">
-<meta name="twitter:description" content="配置文件1.  /etc/redis.conf$ diff /etc/redis.conf /path/to/source/redis.conf1234567869c69&amp;lt; bind *---&amp;gt; bind 127.0.0.1136c136&amp;lt; daemonize yes---&amp;gt; daemonize no 2. /usr/lib/systemd/system/redis.ser">
+<meta name="twitter:title" content="redis守护进程">
+<meta name="twitter:description" content="配置文件1.  /etc/redis.conf$ diff /etc/redis.conf /path/to/source/redis.conf1234136c136&amp;lt; daemonize yes---&amp;gt; daemonize no 2. /usr/lib/systemd/system/redis.service$ cat /usr/lib/systemd/system/redis.se">
   
     <link rel="alternate" href="/atom.xml" title="lgt21" type="application/atom+xml">
   
@@ -83,7 +83,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      redis配置+守护进程
+      redis守护进程
     </h1>
   
 
@@ -91,7 +91,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h3><h6 id="1-etc-redis-conf"><a href="#1-etc-redis-conf" class="headerlink" title="1.  /etc/redis.conf"></a>1.  /etc/redis.conf</h6><p><code>$ diff /etc/redis.conf /path/to/source/redis.conf</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">69c69</span><br><span class="line">&lt; bind *</span><br><span class="line">---</span><br><span class="line">&gt; bind 127.0.0.1</span><br><span class="line">136c136</span><br><span class="line">&lt; daemonize yes</span><br><span class="line">---</span><br><span class="line">&gt; daemonize no</span><br></pre></td></tr></table></figure></p>
+        <h3 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h3><h6 id="1-etc-redis-conf"><a href="#1-etc-redis-conf" class="headerlink" title="1.  /etc/redis.conf"></a>1.  /etc/redis.conf</h6><p><code>$ diff /etc/redis.conf /path/to/source/redis.conf</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">136c136</span><br><span class="line">&lt; daemonize yes</span><br><span class="line">---</span><br><span class="line">&gt; daemonize no</span><br></pre></td></tr></table></figure></p>
 <h6 id="2-usr-lib-systemd-system-redis-service"><a href="#2-usr-lib-systemd-system-redis-service" class="headerlink" title="2. /usr/lib/systemd/system/redis.service"></a>2. /usr/lib/systemd/system/redis.service</h6><p><code>$ cat /usr/lib/systemd/system/redis.service</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">[Unit]</span><br><span class="line">Description=redis service</span><br><span class="line">After=network.target</span><br><span class="line"></span><br><span class="line">[Service]</span><br><span class="line">Type=forking</span><br><span class="line">ExecStart=/usr/local/bin/redis-server /etc/redis.conf</span><br><span class="line">ExecReload=/usr/local/bin/redis-cli shutdown &amp; /usr/local/bin/redis-server /etc/redis.conf</span><br><span class="line">ExecStop=/usr/local/bin/redis-cli shutdown</span><br><span class="line">Restart=always</span><br><span class="line"></span><br><span class="line">[Install]</span><br><span class="line">WantedBy=multi-user.target</span><br></pre></td></tr></table></figure></p>
 
       
@@ -162,7 +162,7 @@
       <ul>
         
           <li>
-            <a href="/2018/04/29/redis配置-守护进程/">redis配置+守护进程</a>
+            <a href="/2018/04/29/redis配置-守护进程/">redis守护进程</a>
           </li>
         
           <li>
